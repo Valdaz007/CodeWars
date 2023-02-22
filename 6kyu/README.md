@@ -1,1 +1,1 @@
-echo "# CodeWars"
+# CodeWars
