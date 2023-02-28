@@ -8,9 +8,6 @@
 # 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
 # 4 --> 0 (because 4 is already a one-digit number)
 
+import functools as ft
 def persistence(n):
-    if n > 9: return 0
-    else:
-        mul = 1
-        for i in str(n): mul *= int(i)
-        return persistence(mul)+1
+    return 0 if n < 9 else persistence(ft.reduce(lambda x, y: x*y, [int(i) for i in str(n)]))+1
