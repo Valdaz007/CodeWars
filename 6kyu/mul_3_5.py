@@ -5,6 +5,5 @@
 
 # Note: If the number is a multiple of both 3 and 5, only count it once
 
-from functools import reduce
 def solution(number):
-    return 0 if number <= 3 else reduce(lambda x, y: x+y, [i for i in range(number-1, 0, -1) if i % 3 == 0 or i % 5 == 0])
+    return 0 if number <= 3 else sum([i for i in range(number) if i % 3 == 0 or i % 5 == 0])
