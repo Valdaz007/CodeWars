@@ -9,11 +9,10 @@
 # 4 --> 0 (because 4 is already a one-digit number)
 
 def persistence(n):
-    n = str(n)
-    if len(n) == 1:
+    if n > 9:
         return 0
     else:
         mul = 1
-        for i in n:
+        for i in str(n):
             mul *= int(i)
         return persistence(mul)+1
