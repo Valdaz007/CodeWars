@@ -18,12 +18,10 @@
 # Attention: If the number has leading zeros the amount of digits should be considered.
 
 def increment_string(strng):
-    print(strng)
     count = numCount(strng)
     if count == 0:
         return f"{strng}1"
-    strInc = zero(strng[-count:])
-    return f"{strng[:-count]}{strInc}"
+    return f"{strng[:-count]}{zero(strng[-count:])}"
 
 def zero(temp):
     if temp[0] == "0" and len(temp) == 1:
