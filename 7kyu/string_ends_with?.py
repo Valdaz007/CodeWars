@@ -5,11 +5,11 @@
 # solution('abc', 'bc') # returns true
 # solution('abc', 'd') # returns false
 
-def long_solution(text, ending):
+def long_solution(text: str, ending: str) -> bool:
   if ending in text[-len(ending):]:     # using the 'len()' we can get the number of characters in the ending variable
     return True                         # and using text[-len(ending):] - we compare with the last character numbers that correspond to number of characters in ending
   else:
     return False
 
-def solution(text, ending):
+def solution(text: str, ending: str) -> bool:
   return True if ending in text[-len(ending):] else False
