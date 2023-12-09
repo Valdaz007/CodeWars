@@ -22,5 +22,5 @@ class RomanNumerals:
             else:
                 rom_sum-=RomanNumerals.romnum[j]
         return rom_sum
-    
+
 print(RomanNumerals.from_roman("MCMI"))
